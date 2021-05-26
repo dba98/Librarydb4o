@@ -6,9 +6,9 @@ namespace Librarydb4o.Models
     {
         private List<Copy> _copies;
 
-        public Item()
+        public Item(List<Copy> copies)
         {
-            
+            _copies = copies;
         }
     }
 }

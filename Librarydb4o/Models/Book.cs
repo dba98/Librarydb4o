@@ -1,4 +1,6 @@
-﻿namespace Librarydb4o.Models
+﻿using System.Collections.Generic;
+
+namespace Librarydb4o.Models
 {
     public class Book : Monograph
     {
@@ -14,9 +16,9 @@
 
         #endregion
 
-        public Book()
+        public Book(string isbn,uint numberOfPages,List<Copy> copies) : base(numberOfPages,copies)
         {
-            
+            _isbn = isbn;
         }
     }
 }

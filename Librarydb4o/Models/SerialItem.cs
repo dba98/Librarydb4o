@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Librarydb4o.Models
 {
@@ -22,9 +23,12 @@ namespace Librarydb4o.Models
 
         #endregion
 
-        public SerialItem()
+        public SerialItem(uint number, uint volume,DateTime date,Serial serial,List<Copy> copies) : base(copies)
         {
-            
+            _number = number;
+            _volume = volume;
+            _date = date;
+            _serial = serial;
         }
     }
 }

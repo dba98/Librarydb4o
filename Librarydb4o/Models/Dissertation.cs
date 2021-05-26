@@ -1,8 +1,10 @@
-﻿namespace Librarydb4o.Models
+﻿using System.Collections.Generic;
+
+namespace Librarydb4o.Models
 {
     public class Dissertation : AcademicMonograph
     {
-        public Dissertation()
+        public Dissertation(uint numberOfPages,List<Copy> copies) : base(numberOfPages,copies)
         {
             
         }

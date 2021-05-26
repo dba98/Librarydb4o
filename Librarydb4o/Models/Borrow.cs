@@ -22,9 +22,12 @@ namespace Librarydb4o.Models
         
         #endregion
 
-        public Borrow()
+        public Borrow(DateTime borrowedDate,DateTime returnedDate, Copy copyBorrowed,Account accountReq)
         {
-            
+            _borrowedDate = borrowedDate;
+            _returnedDate = returnedDate;
+            _copyBorrowed = copyBorrowed;
+            _accountReq = accountReq;
         }
     }
 }

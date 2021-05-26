@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Interfaces" />
+      <PackageReference Include="db4o-core" Version="8.1.6" />
     </ItemGroup>
 
 </Project>

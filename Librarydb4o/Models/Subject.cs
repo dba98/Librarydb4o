@@ -17,9 +17,9 @@ namespace Librarydb4o.Models
 
         #endregion
         
-        public Subject()
+        public Subject(List<Monograph> monographs)
         {
-            
+            _monographs = monographs;
         }
     }
 }

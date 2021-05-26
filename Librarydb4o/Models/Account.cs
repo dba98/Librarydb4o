@@ -25,9 +25,13 @@ namespace Librarydb4o.Models
         
         #endregion
 
-        public Account()
+        public Account(DateTime dateOpened,bool isValid,AccountType accountType,Person owner,List<Borrow> borrows)
         {
-            
+            _dateOpened = dateOpened;
+            _isValid = isValid;
+            _accountType = accountType;
+            _owner = owner;
+            _borrows = borrows;
         }
     }
 }

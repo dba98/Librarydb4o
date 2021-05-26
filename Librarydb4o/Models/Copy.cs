@@ -25,9 +25,13 @@ namespace Librarydb4o.Models
 
         #endregion
         
-        public Copy()
+        public Copy(DateTime acquiredDate,Item item,List<Borrow> borrows,string callNumber,string location)
         {
-            
+            _acquiredDate = acquiredDate;
+            _item = item;
+            _borrows = borrows;
+            _callNumber = callNumber;
+            _location = location;
         }
     }
 }

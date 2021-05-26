@@ -18,9 +18,10 @@ namespace Librarydb4o.Models
 
         #endregion
 
-        public Person()
+        public Person(Account account,Serial serial,List<Monograph> monographs) : base(monographs)
         {
-            
+            _account = account;
+            _serial = serial;
         }
 
     }

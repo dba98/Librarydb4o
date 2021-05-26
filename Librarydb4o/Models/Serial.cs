@@ -6,21 +6,22 @@ namespace Librarydb4o.Models
     {
         #region Attributes
 
-        private List<SerialItem> _serialItem;
+        private List<SerialItem> _serialItems;
         private string _title;
         
         #endregion
 
         #region Properties
 
-        public List<SerialItem> SerialItem => _serialItem;
+        public List<SerialItem> SerialItem => _serialItems;
         public string Title => _title;
 
         #endregion
 
-        public Serial()
+        public Serial(List<SerialItem> serialItems,string title)
         {
-            
+            _serialItems = serialItems;
+            _title = title;
         }
     }
 }
