@@ -6,6 +6,7 @@ namespace Librarydb4o.Models
     {
         #region Attributes
 
+        private string _name;
         private Account _account;
         private Serial _serial;
         
@@ -13,13 +14,20 @@ namespace Librarydb4o.Models
 
         #region Properties
 
-        public Account Account => _account;
+        public string Name => _name;
+        public Account Account
+        {
+            get => _account;
+            set => _account = value;
+        }
+
         public Serial Serial => _serial;
 
         #endregion
 
-        public Person(Account account,Serial serial,List<Monograph> monographs) : base(monographs)
+        public Person(string name,Account account,Serial serial,List<Monograph> monographs) : base(monographs)
         {
+            _name = name;
             _account = account;
             _serial = serial;
         }
